@@ -18,16 +18,20 @@ Checking for function docstring:
          True
 
 Checking regular addition:
-	 >>> add_integer(3, 7)
-	 10
+	 >>> add_integer(2, 3)
+	 5
 
 Checking positive with negative:
-	 >>> add_integer(3, -5)
+	 >>> add_integer(2, -4)
 	 -2
 
 Checking negative with positive:
-	 >>> add_integer(-3, 8)
-	 5
+	 >>> add_integer(-6, 8)
+	 2
+
+Checking addition over multiple values:
+	 >>> [add_integer(i, i ** 2) for i in range(6)]
+	 [0, 2, 6, 12, 20, 30]
 
 Checking float with int:
 	 >>> add_integer(2.1, 4)
