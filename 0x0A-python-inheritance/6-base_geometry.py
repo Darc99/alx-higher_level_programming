@@ -7,4 +7,5 @@ class BaseGeometry:
         Public instance method that raises an exception
         """
         def area(self):
+            """Not implemented"""
             raise Exception("area() is not implemented")
