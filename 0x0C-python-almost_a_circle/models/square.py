@@ -31,4 +31,20 @@ class Square(Rectangle):
 		"""overloading method"""
 		return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y, self.width)
 
+	def update(self, *args, **kwargs):
+		"""assigns an argument to each attribute"""
+		attr_args = ["id", "size", "x", "y"]
+		i = 0
+		length = len(args)
+		if length > 0:
+			for arg in range(length):
+				setattr(self, attr_args[i], args[i])
+				i += 1
+		else:
+			for key, value in kwargs.items():
+				setattr(self, key, value)
 		
+	def to_dictionary(self):
+		"""the dictionary representation of a Rectangle"""
+		dictionary_sq = {"id": self.id, "size": self.size, "x": self.__x, "y": self.__y}
+		return dictionary_sq
