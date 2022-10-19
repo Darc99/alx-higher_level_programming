@@ -1,1 +1,1 @@
-#   Web Scrapping
+#   JavaScript - Web scraping
